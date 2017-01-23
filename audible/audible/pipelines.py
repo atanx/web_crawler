@@ -6,7 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import sys
 
-class AudiblePipeline(object):
+class PrintPipeline(object):
     def process_item(self, item, spider):
         fields = ['title',
                   'author',
