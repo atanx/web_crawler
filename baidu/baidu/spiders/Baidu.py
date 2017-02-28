@@ -2,19 +2,22 @@
 import scrapy
 import re
 from os.path import dirname, join
+import requests
+import platform
 
 class BaiduSpider(scrapy.Spider):
     name = "Baidu"
     allowed_domains = ["baidu.com"]
 
-    def __init__(self, words=u"别墅", page_limit=1, **kwargs):
+    def __init__(self, words=u"别墅", csv='', page_limit=1, **kwargs):
         super(BaiduSpider, self).__init__(self, **kwargs)
-        words = words.decode('gbk').encode('utf-8')
+        #words = words.decode('gbk').encode('utf-8')
         self.words = re.split(u',|;', words)
         self.page_limit = int(page_limit)
+        self.csv = csv
 
     def start_requests(self):
-        f = open(join(dirname(__file__), '../../data/word2.csv'))
+        f = open(join(dirname(__file__), '../../data/' + self.csv))
         for word in f.readlines():
             word = word.strip()
             if not word:
@@ -42,6 +45,7 @@ class BaiduSpider(scrapy.Spider):
                     show_url1 = g_result.xpath('./div[3]//span/text()').extract_first() or ''
                     show_url2 = g_result.xpath('.//div/a/span[contains(text(),".com")]/text()').extract_first() or ''
                     show_url = show_url1 or show_url2
+                    show_url = self.get_real_url(url)
                     is_ad = u"推广"
                     result_id += 1
                     if not all([title, url]):
@@ -62,6 +66,7 @@ class BaiduSpider(scrapy.Spider):
                 show_url1 = result.xpath('.//span[@class="c-showurl"]/text()').extract_first() or ""
                 show_url2 = result.xpath('.//a[@class="c-showurl"]/text()').extract_first() or ""
                 show_url = show_url1 or show_url2
+                show_url = self.get_real_url(url)
                 is_op = 'result-op' in (result.xpath('./@class').extract_first()  or "")
                 is_ad = u""
                 if is_op:
@@ -81,3 +86,16 @@ class BaiduSpider(scrapy.Spider):
             next_page = response.xpath(u'//a[contains(text(),"下一页")]/@href').extract_first()
             if next_page and page_id <= self.page_limit:
                 yield scrapy.Request(url=response.urljoin(next_page), callback=self.parse, meta={'word': word, 'result_id': result_id, 'page_id': page_id})
+
+    def get_real_url(self, url):
+        real_url = ''
+        try:
+            r = requests.get(url, allow_redirects=False)
+            real_url = r.headers.get('location', '')
+            if real_url.startswith('/baidu.php'):
+                url = "http://www.baidu.com" + real_url
+                r = requests.get(url, allow_redirects=False)
+                real_url = r.headers.get('location', '')
+        except:
+            pass
+        return real_url
