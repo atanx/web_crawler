@@ -1,0 +1,915 @@
+2017-03-04 20:54:02 [scrapy] INFO: Scrapy 1.1.0 started (bot: Lishichunqiu)
+2017-03-04 20:54:02 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Lishichunqiu.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['Lishichunqiu.spiders'], 'BOT_NAME': 'Lishichunqiu', 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36', 'LOG_FILE': 'r2.log'}
+2017-03-04 20:54:02 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-03-04 20:54:03 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-04 20:54:03 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-04 20:54:03 [scrapy] INFO: Enabled item pipelines:
+['Lishichunqiu.pipelines.ToDBPipeline']
+2017-03-04 20:54:03 [scrapy] INFO: Spider opened
+2017-03-04 20:54:03 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-04 20:54:03 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/robots.txt> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/zhouchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shangchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shanggu/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/weijinnanbeichao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/xiachao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/hanchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qinchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/chunqiuzhanguo/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/suichao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qingchao/> (referer: None)
+2017-03-04 20:54:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/yuanchao/> (referer: None)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/> (referer: http://www.lishichunqiu.com/zhouchao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/minguo/> (referer: None)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shangchao/shangchaorenwu/> (referer: http://www.lishichunqiu.com/shangchao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sgrw/> (referer: http://www.lishichunqiu.com/sanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sgjunshi/> (referer: http://www.lishichunqiu.com/sanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sglishi/> (referer: http://www.lishichunqiu.com/sanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sgculture/> (referer: http://www.lishichunqiu.com/sanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shangchao/shangchaolishi/> (referer: http://www.lishichunqiu.com/shangchao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/zhouchao/xizhou/> (referer: http://www.lishichunqiu.com/zhouchao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/mingchao/> (referer: None)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/> (referer: http://www.lishichunqiu.com/weijinnanbeichao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qinchao/qinchaojunshi/> (referer: http://www.lishichunqiu.com/qinchao/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/)
+2017-03-04 20:54:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/> (referer: http://www.lishichunqiu.com/yuanchao/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/64.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/65.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3776.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sgrw/index_2.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/66.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/tcjunshi/> (referer: http://www.lishichunqiu.com/tangchao/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3775.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/67.html> (referer: http://www.lishichunqiu.com/zhouchao/zhouchaorenwu/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/65.html>
+None
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1760.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/mingchao/mcjunshi/> (referer: http://www.lishichunqiu.com/mingchao/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/index_2.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sglishi/index_2.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3608.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/81.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1760.html>
+None
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2490.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3727.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/152.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3086.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3606.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2177.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2281.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3409.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/81.html>
+None
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3728.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/64_2.html> (referer: http://www.lishichunqiu.com/history/64.html)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/73.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3727.html>
+None
+2017-03-04 20:54:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3086.html>
+None
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/76.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/67_2.html> (referer: http://www.lishichunqiu.com/history/67.html)
+2017-03-04 20:54:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3775_2.html> (referer: http://www.lishichunqiu.com/history/3775.html)
+2017-03-04 20:54:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3728.html>
+None
+2017-03-04 20:54:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/64_2.html>
+None
+2017-03-04 20:54:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/73.html>
+None
+2017-03-04 20:54:07 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3729.html> (referer: http://www.lishichunqiu.com/yuanchao/yuanchaojunshi/)
+2017-03-04 20:54:07 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/index_2.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:07 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3608_2.html> (referer: http://www.lishichunqiu.com/history/3608.html)
+2017-03-04 20:54:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/76.html>
+None
+2017-03-04 20:54:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/67_2.html>
+None
+2017-03-04 20:54:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/165.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/166.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/167.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3729.html>
+None
+2017-03-04 20:54:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3608_2.html>
+None
+2017-03-04 20:54:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2551.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2311.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/165.html>
+None
+2017-03-04 20:54:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/166.html>
+None
+2017-03-04 20:54:09 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/167.html>
+None
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sglishi/index_3.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/131.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/130.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2551.html>
+None
+2017-03-04 20:54:09 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2311.html>
+None
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3409_2.html> (referer: http://www.lishichunqiu.com/history/3409.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3400.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3609.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:09 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/131.html>
+None
+2017-03-04 20:54:10 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/130.html>
+None
+2017-03-04 20:54:10 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2177_2.html> (referer: http://www.lishichunqiu.com/history/2177.html)
+2017-03-04 20:54:10 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2281_2.html> (referer: http://www.lishichunqiu.com/history/2281.html)
+2017-03-04 20:54:10 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3409_2.html>
+None
+2017-03-04 20:54:10 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3400.html>
+None
+2017-03-04 20:54:11 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3609.html>
+None
+2017-03-04 20:54:11 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/152_2.html> (referer: http://www.lishichunqiu.com/history/152.html)
+2017-03-04 20:54:11 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2490_2.html> (referer: http://www.lishichunqiu.com/history/2490.html)
+2017-03-04 20:54:11 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3606_2.html> (referer: http://www.lishichunqiu.com/history/3606.html)
+2017-03-04 20:54:11 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2177_2.html>
+None
+2017-03-04 20:54:12 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2281_2.html>
+None
+2017-03-04 20:54:12 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3775_3.html> (referer: http://www.lishichunqiu.com/history/3775_2.html)
+2017-03-04 20:54:12 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2078.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:12 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2158.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:12 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/152_2.html>
+None
+2017-03-04 20:54:12 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2490_2.html>
+None
+2017-03-04 20:54:12 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3606_2.html>
+None
+2017-03-04 20:54:12 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2595.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:12 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2711.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:12 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3775_3.html>
+None
+2017-03-04 20:54:13 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2078.html>
+None
+2017-03-04 20:54:13 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2158.html>
+None
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2997.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2969.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2993.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2595.html>
+None
+2017-03-04 20:54:13 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2711.html>
+None
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3262.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3213.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3112.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:13 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2997.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2969.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2993.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3283.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:14 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3341.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:14 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3262.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3213.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3112.html>
+None
+2017-03-04 20:54:14 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3270.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:14 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3607.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:14 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3394.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:15 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3283.html>
+None
+2017-03-04 20:54:15 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3341.html>
+None
+2017-03-04 20:54:15 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2580.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:15 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3248.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:15 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2160.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:15 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3270.html>
+None
+2017-03-04 20:54:15 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3607.html>
+None
+2017-03-04 20:54:15 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3394.html>
+None
+2017-03-04 20:54:15 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2924.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:15 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2252.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:16 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2580.html>
+None
+2017-03-04 20:54:16 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3248.html>
+None
+2017-03-04 20:54:16 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2160.html>
+None
+2017-03-04 20:54:16 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/154.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/index_2.html)
+2017-03-04 20:54:16 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/151.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/index_2.html)
+2017-03-04 20:54:16 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3128.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/index_2.html)
+2017-03-04 20:54:16 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2924.html>
+None
+2017-03-04 20:54:17 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2252.html>
+None
+2017-03-04 20:54:17 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2183.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:17 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2181.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:17 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/185.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:17 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/154.html>
+None
+2017-03-04 20:54:17 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/151.html>
+None
+2017-03-04 20:54:17 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3128.html>
+None
+2017-03-04 20:54:17 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2288.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:17 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2325.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2183.html>
+None
+2017-03-04 20:54:18 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2181.html>
+None
+2017-03-04 20:54:18 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/185.html>
+None
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2567.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2647.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2585.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2288.html>
+None
+2017-03-04 20:54:18 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2325.html>
+None
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2849.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2929.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:18 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2728.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:19 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2567.html>
+None
+2017-03-04 20:54:19 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2647.html>
+None
+2017-03-04 20:54:19 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2585.html>
+None
+2017-03-04 20:54:19 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2849.html>
+None
+2017-03-04 20:54:20 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2929.html>
+None
+2017-03-04 20:54:20 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2728.html>
+None
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2945.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2968.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3078.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3219.html> (referer: http://www.lishichunqiu.com/mingchao/mcjunshi/)
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3020.html> (referer: http://www.lishichunqiu.com/tangchao/tcjunshi/)
+2017-03-04 20:54:20 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2945.html>
+None
+2017-03-04 20:54:20 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2968.html>
+None
+2017-03-04 20:54:20 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/66_2.html> (referer: http://www.lishichunqiu.com/history/66.html)
+2017-03-04 20:54:20 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3078.html>
+None
+2017-03-04 20:54:21 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3219.html>
+None
+2017-03-04 20:54:21 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3020.html>
+None
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1161.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/sanguo/sgrw/index_3.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1157.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1156.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1158.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1159.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:21 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1160.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:22 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/66_2.html>
+None
+2017-03-04 20:54:22 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1161.html>
+None
+2017-03-04 20:54:22 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1157.html>
+None
+2017-03-04 20:54:22 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1156.html>
+None
+2017-03-04 20:54:23 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1158.html>
+None
+2017-03-04 20:54:23 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1159.html>
+None
+2017-03-04 20:54:23 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1160.html>
+None
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1150.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1148.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1162.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/126.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1163.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1600.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1278.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1164.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1150.html>
+None
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1607.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1714.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1715.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1605.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1604.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1606.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1603.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:23 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1148.html>
+None
+2017-03-04 20:54:24 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1162.html>
+None
+2017-03-04 20:54:24 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/126.html>
+None
+2017-03-04 20:54:25 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1163.html>
+None
+2017-03-04 20:54:25 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1600.html>
+None
+2017-03-04 20:54:25 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1278.html>
+None
+2017-03-04 20:54:25 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1164.html>
+None
+2017-03-04 20:54:25 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1716.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:26 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1607.html>
+None
+2017-03-04 20:54:26 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1714.html>
+None
+2017-03-04 20:54:26 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1715.html>
+None
+2017-03-04 20:54:26 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1605.html>
+None
+2017-03-04 20:54:26 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1604.html>
+None
+2017-03-04 20:54:27 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1606.html>
+None
+2017-03-04 20:54:27 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1603.html>
+None
+2017-03-04 20:54:27 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1716.html>
+None
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2797.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/77.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1718.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3776_2.html> (referer: http://www.lishichunqiu.com/history/3776.html)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1719.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1717.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/index_2.html)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2147.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:27 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2643.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2797.html>
+None
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3160.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3196.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2862.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3185.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2946.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2899.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2891.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3037.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:28 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/77.html>
+None
+2017-03-04 20:54:28 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1718.html>
+None
+2017-03-04 20:54:29 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3776_2.html>
+None
+2017-03-04 20:54:29 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1719.html>
+None
+2017-03-04 20:54:29 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1717.html>
+None
+2017-03-04 20:54:29 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2147.html>
+None
+2017-03-04 20:54:30 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2643.html>
+None
+2017-03-04 20:54:30 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3160.html>
+None
+2017-03-04 20:54:30 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3196.html>
+None
+2017-03-04 20:54:31 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2862.html>
+None
+2017-03-04 20:54:31 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2946.html>
+None
+2017-03-04 20:54:31 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3185.html>
+None
+2017-03-04 20:54:31 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2899.html>
+None
+2017-03-04 20:54:31 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2891.html>
+None
+2017-03-04 20:54:32 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3037.html>
+None
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3397.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3438.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3518.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3254.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3771.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3772.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3217.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3414.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3397.html>
+None
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/79.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3815.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/74.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/80.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/78.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3908.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3914.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgls/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/75.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:32 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3438.html>
+None
+2017-03-04 20:54:32 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3518.html>
+None
+2017-03-04 20:54:33 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3254.html>
+None
+2017-03-04 20:54:33 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3771.html>
+None
+2017-03-04 20:54:34 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3772.html>
+None
+2017-03-04 20:54:34 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3217.html>
+None
+2017-03-04 20:54:34 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3414.html>
+None
+2017-03-04 20:54:34 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/79.html>
+None
+2017-03-04 20:54:35 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3815.html>
+None
+2017-03-04 20:54:35 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/74.html>
+None
+2017-03-04 20:54:35 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/80.html>
+None
+2017-03-04 20:54:35 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/78.html>
+None
+2017-03-04 20:54:36 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3908.html>
+None
+2017-03-04 20:54:36 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3914.html>
+None
+2017-03-04 20:54:36 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/75.html>
+None
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3454.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3073.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2517.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3763.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3770.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzgjss/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3096.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3764.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3762.html> (referer: http://www.lishichunqiu.com/qinchao/qinchaojunshi/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3454.html>
+None
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2566.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2230.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1663.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1664.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3064.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/82.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/84.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:36 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/83.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:37 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3073.html>
+None
+2017-03-04 20:54:37 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2517.html>
+None
+2017-03-04 20:54:37 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3763.html>
+None
+2017-03-04 20:54:37 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3770.html>
+None
+2017-03-04 20:54:37 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3764.html>
+None
+2017-03-04 20:54:38 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3096.html>
+None
+2017-03-04 20:54:38 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3762.html>
+None
+2017-03-04 20:54:38 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2566.html>
+None
+2017-03-04 20:54:38 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2230.html>
+None
+2017-03-04 20:54:38 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1663.html>
+None
+2017-03-04 20:54:39 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1664.html>
+None
+2017-03-04 20:54:39 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3064.html>
+None
+2017-03-04 20:54:39 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/82.html>
+None
+2017-03-04 20:54:39 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/84.html>
+None
+2017-03-04 20:54:40 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/83.html>
+None
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2045.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3148.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3074.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/153.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3572.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3554.html> (referer: http://www.lishichunqiu.com/chunqiuzhanguo/cqzglsrw/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2010.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2042.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3038.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2045.html>
+None
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2622.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2449.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2897.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2556.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2749.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2553.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2226.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:40 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3148.html>
+None
+2017-03-04 20:54:40 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3004.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:41 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3074.html>
+None
+2017-03-04 20:54:41 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/153.html>
+None
+2017-03-04 20:54:41 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3572.html>
+None
+2017-03-04 20:54:41 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3554.html>
+None
+2017-03-04 20:54:42 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2010.html>
+None
+2017-03-04 20:54:42 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2042.html>
+None
+2017-03-04 20:54:42 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3038.html>
+None
+2017-03-04 20:54:42 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2622.html>
+None
+2017-03-04 20:54:43 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2449.html>
+None
+2017-03-04 20:54:43 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2897.html>
+None
+2017-03-04 20:54:43 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2556.html>
+None
+2017-03-04 20:54:43 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2553.html>
+None
+2017-03-04 20:54:44 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2749.html>
+None
+2017-03-04 20:54:44 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2226.html>
+None
+2017-03-04 20:54:44 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3004.html>
+None
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3047.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3450.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2950.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3136.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3040.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3163.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:44 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3313.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3047.html>
+None
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/mingchao/mclsrw/> (referer: http://www.lishichunqiu.com/mingchao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3549.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2555.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3545.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/mingchao/mczzwh/> (referer: http://www.lishichunqiu.com/mingchao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3246.html> (referer: http://www.lishichunqiu.com/weijinnanbeichao/nanbeichao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/61.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/mingchao/mingchaolishi/> (referer: http://www.lishichunqiu.com/mingchao/)
+2017-03-04 20:54:45 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3450.html>
+None
+2017-03-04 20:54:45 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2950.html>
+None
+2017-03-04 20:54:45 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3136.html>
+None
+2017-03-04 20:54:46 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3040.html>
+None
+2017-03-04 20:54:46 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3163.html>
+None
+2017-03-04 20:54:46 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3313.html>
+None
+2017-03-04 20:54:46 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3549.html>
+None
+2017-03-04 20:54:46 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2555.html>
+None
+2017-03-04 20:54:47 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3545.html>
+None
+2017-03-04 20:54:47 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3246.html>
+None
+2017-03-04 20:54:47 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/61.html>
+None
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/62.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/69.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/63.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/60.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/70.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/68.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3172.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/71.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/62.html>
+None
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/48.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/57.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3774.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/56.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/51.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/49.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/47.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:47 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3773.html> (referer: http://www.lishichunqiu.com/zhouchao/xizhou/)
+2017-03-04 20:54:48 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/69.html>
+None
+2017-03-04 20:54:48 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/63.html>
+None
+2017-03-04 20:54:48 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/60.html>
+None
+2017-03-04 20:54:48 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/68.html>
+None
+2017-03-04 20:54:48 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/70.html>
+None
+2017-03-04 20:54:49 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3172.html>
+None
+2017-03-04 20:54:49 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/71.html>
+None
+2017-03-04 20:54:49 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/48.html>
+None
+2017-03-04 20:54:49 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/57.html>
+None
+2017-03-04 20:54:50 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3774.html>
+None
+2017-03-04 20:54:50 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/56.html>
+None
+2017-03-04 20:54:50 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/51.html>
+None
+2017-03-04 20:54:51 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/49.html>
+None
+2017-03-04 20:54:51 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/47.html>
+None
+2017-03-04 20:54:51 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3773.html>
+None
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3687.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3228.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/59.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3613.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/50.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/58.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaolishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3612.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3520.html> (referer: http://www.lishichunqiu.com/sanguo/sgculture/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3205.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3687.html>
+None
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3077.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3355.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2978.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3085.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2957.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:51 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2952.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:52 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3228.html>
+None
+2017-03-04 20:54:52 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/59.html>
+None
+2017-03-04 20:54:52 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3613.html>
+None
+2017-03-04 20:54:52 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/50.html>
+None
+2017-03-04 20:54:52 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/58.html>
+None
+2017-03-04 20:54:53 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3612.html>
+None
+2017-03-04 20:54:53 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3520.html>
+None
+2017-03-04 20:54:53 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3205.html>
+None
+2017-03-04 20:54:53 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2159.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:53 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3077.html>
+None
+2017-03-04 20:54:53 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3355.html>
+None
+2017-03-04 20:54:54 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2978.html>
+None
+2017-03-04 20:54:54 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3085.html>
+None
+2017-03-04 20:54:55 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2952.html>
+None
+2017-03-04 20:54:55 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2957.html>
+None
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2627.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:55 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2159.html>
+None
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2868.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2533.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2195.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2231.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:55 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3452.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:56 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2627.html>
+None
+2017-03-04 20:54:56 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2202.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:56 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2989.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:56 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2868.html>
+None
+2017-03-04 20:54:56 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2533.html>
+None
+2017-03-04 20:54:56 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2195.html>
+None
+2017-03-04 20:54:56 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3452.html>
+None
+2017-03-04 20:54:57 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2231.html>
+None
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2996.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2202.html>
+None
+2017-03-04 20:54:57 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2989.html>
+None
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3813.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3854.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3814.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3385.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3253.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2996.html>
+None
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3876.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3898.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:57 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3813.html>
+None
+2017-03-04 20:54:58 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3854.html>
+None
+2017-03-04 20:54:58 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3814.html>
+None
+2017-03-04 20:54:58 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3385.html>
+None
+2017-03-04 20:54:58 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3253.html>
+None
+2017-03-04 20:54:58 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3910.html> (referer: http://www.lishichunqiu.com/sanguo/sglishi/)
+2017-03-04 20:54:58 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3876.html>
+None
+2017-03-04 20:54:59 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3898.html>
+None
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/132.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3027.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/124.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/133.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3605.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3910.html>
+None
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3610.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3611.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:54:59 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/132.html>
+None
+2017-03-04 20:54:59 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3027.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/124.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/133.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3605.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2633.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:55:00 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3610.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3611.html>
+None
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2611.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3868.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3849.html> (referer: http://www.lishichunqiu.com/sanguo/sgjunshi/)
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1762.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:00 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1761.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:01 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2633.html>
+None
+2017-03-04 20:55:01 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1796.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:01 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1797.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:01 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2611.html>
+None
+2017-03-04 20:55:01 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3868.html>
+None
+2017-03-04 20:55:02 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3849.html>
+None
+2017-03-04 20:55:02 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1762.html>
+None
+2017-03-04 20:55:02 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1761.html>
+None
+2017-03-04 20:55:02 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1798.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:02 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1796.html>
+None
+2017-03-04 20:55:03 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1797.html>
+None
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2421.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2422.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1799.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2424.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2423.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] INFO: Crawled 292 pages (at 292 pages/min), scraped 231 items (at 231 items/min)
+2017-03-04 20:55:03 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1798.html>
+None
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2425.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2426.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:03 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2421.html>
+None
+2017-03-04 20:55:03 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2422.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1799.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2424.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2423.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2427.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:04 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2425.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2426.html>
+None
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2201.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2472.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2473.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2474.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:04 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2032.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:05 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2427.html>
+None
+2017-03-04 20:55:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2581.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:05 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/2259.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:05 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2201.html>
+None
+2017-03-04 20:55:05 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2472.html>
+None
+2017-03-04 20:55:05 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2473.html>
+None
+2017-03-04 20:55:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2474.html>
+None
+2017-03-04 20:55:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2032.html>
+None
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3339.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2581.html>
+None
+2017-03-04 20:55:06 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/2259.html>
+None
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/52.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3930.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3855.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3469.html> (referer: http://www.lishichunqiu.com/sanguo/sgrw/)
+2017-03-04 20:55:06 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/53.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3339.html>
+None
+2017-03-04 20:55:07 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/55.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:07 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/54.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/52.html>
+None
+2017-03-04 20:55:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3930.html>
+None
+2017-03-04 20:55:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3855.html>
+None
+2017-03-04 20:55:07 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3469.html>
+None
+2017-03-04 20:55:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/53.html>
+None
+2017-03-04 20:55:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/55.html>
+None
+2017-03-04 20:55:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/54.html>
+None
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/minguo/minguoshi/> (referer: http://www.lishichunqiu.com/minguo/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/minguo/minguojunshi/> (referer: http://www.lishichunqiu.com/minguo/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3778.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/1779.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/minguo/minguorenwu/> (referer: http://www.lishichunqiu.com/minguo/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/yuanchao/yuanchaolishi/> (referer: http://www.lishichunqiu.com/yuanchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/yuanchao/yuanchaorenwu/> (referer: http://www.lishichunqiu.com/yuanchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qingchao/qingchaorenwu/> (referer: http://www.lishichunqiu.com/qingchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3778.html>
+None
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qingchao/qingchaojunshi/> (referer: http://www.lishichunqiu.com/qingchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/scwh/> (referer: http://www.lishichunqiu.com/songchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qingchao/qingchaozzwh/> (referer: http://www.lishichunqiu.com/qingchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/sbsclishi/> (referer: http://www.lishichunqiu.com/songchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/scjunshi/> (referer: http://www.lishichunqiu.com/songchao/)
+2017-03-04 20:55:08 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qingchao/qingchaolishi/> (referer: http://www.lishichunqiu.com/qingchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/1779.html>
+None
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/scrw/> (referer: http://www.lishichunqiu.com/songchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/suichao/suichaorenwu/> (referer: http://www.lishichunqiu.com/suichao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/suichao/suichaojunshi/> (referer: http://www.lishichunqiu.com/suichao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/wdsgls/> (referer: http://www.lishichunqiu.com/tangchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/suichao/suichaolishi/> (referer: http://www.lishichunqiu.com/suichao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/tcwh/> (referer: http://www.lishichunqiu.com/tangchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/tclsrw/> (referer: http://www.lishichunqiu.com/tangchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qinchao/qinchaolishi/> (referer: http://www.lishichunqiu.com/qinchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/tangchao/tangchaolishi/> (referer: http://www.lishichunqiu.com/tangchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/qinchao/qinchaorenwu/> (referer: http://www.lishichunqiu.com/qinchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/hanchao/hcwh/> (referer: http://www.lishichunqiu.com/hanchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/hanchao/hclsrw/> (referer: http://www.lishichunqiu.com/hanchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/songchao/scls/> (referer: http://www.lishichunqiu.com/songchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/xiachao/xiachaolishi/> (referer: http://www.lishichunqiu.com/xiachao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/xiachao/xiachaorenwu/> (referer: http://www.lishichunqiu.com/xiachao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/hanchao/handai/> (referer: http://www.lishichunqiu.com/hanchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/weijinnanbeichao/whslg/> (referer: http://www.lishichunqiu.com/weijinnanbeichao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/weijinnanbeichao/jinchao/> (referer: http://www.lishichunqiu.com/weijinnanbeichao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shanggu/shanggushenhua/> (referer: http://www.lishichunqiu.com/shanggu/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shanggu/shanggurenwu/> (referer: http://www.lishichunqiu.com/shanggu/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/shanggu/shanggulishi/> (referer: http://www.lishichunqiu.com/shanggu/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/hanchao/hcjunshi/> (referer: http://www.lishichunqiu.com/hanchao/)
+2017-03-04 20:55:09 [scrapy] DEBUG: Crawled (200) <GET http://www.lishichunqiu.com/history/3777.html> (referer: http://www.lishichunqiu.com/shangchao/shangchaorenwu/)
+2017-03-04 20:55:10 [scrapy] DEBUG: Scraped from <200 http://www.lishichunqiu.com/history/3777.html>
+None
+2017-03-04 20:55:10 [scrapy] INFO: Closing spider (finished)
+2017-03-04 20:55:10 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 161865,
+ 'downloader/request_count': 347,
+ 'downloader/request_method_count/GET': 347,
+ 'downloader/response_bytes': 1278216,
+ 'downloader/response_count': 347,
+ 'downloader/response_status_count/200': 347,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 4, 12, 55, 10, 300000),
+ 'item_scraped_count': 258,
+ 'log_count/DEBUG': 606,
+ 'log_count/INFO': 8,
+ 'request_depth_max': 4,
+ 'response_received_count': 347,
+ 'scheduler/dequeued': 346,
+ 'scheduler/dequeued/memory': 346,
+ 'scheduler/enqueued': 346,
+ 'scheduler/enqueued/memory': 346,
+ 'start_time': datetime.datetime(2017, 3, 4, 12, 54, 3, 71000)}
+2017-03-04 20:55:10 [scrapy] INFO: Spider closed (finished)
