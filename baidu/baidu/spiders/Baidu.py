@@ -9,15 +9,14 @@ class BaiduSpider(scrapy.Spider):
     name = "Baidu"
     allowed_domains = ["baidu.com"]
 
-    def __init__(self, words=u"别墅", csv='', page_limit=1, **kwargs):
+    def __init__(self, csv='', page_limit=1, **kwargs):
         super(BaiduSpider, self).__init__(self, **kwargs)
-        #words = words.decode('gbk').encode('utf-8')
-        self.words = re.split(u',|;', words)
         self.page_limit = int(page_limit)
         self.csv = csv
 
     def start_requests(self):
-        f = open(join(dirname(__file__), '../../data/' + self.csv))
+        #f = open(join(dirname(__file__), '../../data/' + self.csv))
+        f = open(self.csv)
         for word in f.readlines():
             word = word.strip()
             if not word:

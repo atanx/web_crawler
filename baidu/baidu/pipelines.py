@@ -24,10 +24,13 @@ class BaiduPipeline(object):
         str_item = []
         for key in keys:
             field = item.get(key, '').strip()
-            if len(field) > 50 and key=='title':
+            if len(field) > 50 and key == 'title':
                 field = field[0:50]
             field = field.replace(',', ';')
+            if isinstance(field, str):
+                pass
+                # field = field.decode('gbk')
             str_item.append(field)
         str_item = u','.join(str_item)
-        print str_item.decode('utf-8').encode('gbk')
+        print str_item.decode('utf-8').encode('gbk', errors='ignore')
         return item

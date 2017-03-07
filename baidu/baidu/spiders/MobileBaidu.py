@@ -10,15 +10,15 @@ class MobilebaiduSpider(scrapy.Spider):
     allowed_domains = ["baidu.com"]
     custom_settings = {'USER-AGENT':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36'}
 
-    def __init__(self,csv='', page_limit=1, **kwargs):
+    def __init__(self, csv='', page_limit=1, **kwargs):
         super(MobilebaiduSpider, self).__init__(self, **kwargs)
         self.page_limit = int(page_limit)
         self.csv = csv
 
     def start_requests(self):
-        f = open(join(dirname(__file__), '../../data/' + self.csv))
+        f = open(self.csv)
         for word in f.readlines():
-            word = word.strip()
+            word = word.decode('gbk').strip()
             if not word:
                 continue
             url = u"https://m.baidu.com/s?wd=" + word
