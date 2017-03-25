@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度关键词爬取系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/semantic.min.css" rel="stylesheet">
+    <link href="/static/css/common.css" rel="stylesheet">
+     <script src="/static/js/jquery-2.2.1.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui inverted menu">
+  <a class="active item" href="#">Home </a>
+  <a class="item">About </a>
+</div>
+<div ></div>
+<div class="ui main container">
+    <h2 class="ui center aligned icon header"><i class="circular users icon"></i> 百度关键词爬取系统 </h2>
+    <h4 class="ui horizontal divider header"><i class="tag icon"></i> 步骤1，上传要爬取的百度关键词(csv文件)</h4>
+
+
+    <div class="ui two column centered grid">
+        <div class="column">
+            <form  action="" method="POST" ENCTYPE="multipart/form-data">
+            <input type="file" name="file"><br />
+            <input type="submit">
+            </form>
+        </div>
+    </div>
+    <br /><br />
+    <h4 class="ui horizontal divider header"><i class="bar chart icon"></i> 步骤2，下载爬取结果 </h4>
+    <div id="wait_result" style="display: none;">正在爬取</div>
+    <div id="result" style="display: none;">爬取完成。点击下载
+        <a href="index.html">下载</a>
+    </div>
+    <div id="result_table" class="center">
+
+    </div>
+</div>
+
+<div style="height:60px"></div>
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<table class="ui celled table">
+<tr class="table-header"><th>文件名</th>
+    <th>移动端爬取结果</th>
+    <th>PC端爬取结果</th>
+</tr>
+    {%  for raw,mobile,pc in data_files %}
+<tr>
+    <td> {% if raw =='-' %}
+            <i class="attention icon"></i> {{ raw }}
+        {% else %}
+        {{ raw }}<a href="{{ data_path }}{{ raw }}"><i class="file excel outline icon"></i></a>
+        {% endif %}
+    </td>
+    <td> {% if mobile=='-' %}
+             爬取中<i class="attention icon"></i>
+        {% else %}
+        {{ mobile }}<a href="{{ data_path }}{{ mobile }}"><i class="file excel outline icon"></i></a>
+        {% endif %}
+    </td>
+    <td> {% if pc=='-' %}
+            <i class="attention icon"></i>待爬取中
+        {% else %}
+        {{ pc }}<a href="{{ data_path }}{{ pc }}"> <i class="file excel outline icon"></i></a>
+        {% endif %}
+    </td>
+</tr>
+    {% endfor %}
+</table>
