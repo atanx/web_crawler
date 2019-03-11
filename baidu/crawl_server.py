@@ -48,7 +48,7 @@ def crawl(file_list):
 if __name__ == "__main__":
 	while True:
 		cwd = os.path.abspath(os.path.dirname(__file__))
-		_path = os.path.join(cwd, '..', 'CrawlWeb', 'static', 'data')
+		_path = os.path.join(cwd, '..', 'uPhone', 'static', 'data')
 		_path = os.path.abspath(_path)
 		file_list = get_all_need_crawled(_path)
 		os.chdir(cwd)

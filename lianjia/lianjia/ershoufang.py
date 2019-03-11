@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 # coding=utf-8
+try:
+	from . import distance
+except:
+	print "distince未找到"
+
+try:
+	import distance
+except:
+	print "distince未找到"
+
 import re
 import time
 import json
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup as bs
-
-from . import distance
 
 urlDict = {
 	'listMapResult': 'http://soa.dooioo.com/api/v4/online/house/ershoufang/listMapResult?',
@@ -33,12 +41,47 @@ def gen_url(**kwargs):
 	return url
 
 
+def urlRead(url, dataType='json'):
+	dataType = dataType.lower()
+	html = requests.get(url).content
+	if dataType == 'json':
+		data = json.loads(html)
+	else:
+		data = html
+	return data
+
+
 # 获取指定位置的周边小区
-def get_villages(url):
+def getVillagesByCenterPoint(url):
 	html = requests.get(url).content
 	responseDict = json.loads(html)
 	villages = responseDict['dataList']
 	return villages
+
+
+def getVillagesByPlate(dataId):
+	villageUrl = 'http://soa.dooioo.com/api/v4/online/house/ershoufang/listMapResult?access_token=7poanTTBCymmgE0FOn1oKp&client=pc&cityCode=sh&siteType=quyu&type=village&dataId={plate}&showType=list'
+	url = villageUrl.format(plate=dataId)
+	data = urlRead(url)
+	villages = data['dataList']
+	return villages
+
+
+def getPlatesByDistrict(districtName):
+	plateUrl = 'http://soa.dooioo.com/api/v4/online/house/ershoufang/listMapResult?access_token=7poanTTBCymmgE0FOn1oKp&client=pc&cityCode=sh&siteType=quyu&type=plate&dataId={districtName}&showType=list'.format(
+		districtName=districtName)
+	data = urlRead(plateUrl, 'json')
+	return data.get('dataList')
+
+
+def getVillagesByDistrict(districtName):
+	plates = getPlatesByDistrict(districtName)
+	allVillages = []
+	for plate in plates:
+		villages = getVillagesByPlate(plate.get('dataId'))
+		allVillages.extend(villages)
+	return allVillages
+
 
 # 指定小区dataId, 爬取楼栋数、户数、建成年代
 # 补充：板块
@@ -52,7 +95,7 @@ def get_village_detail(dataId=u'5011000018313'):
 	details = dict()
 	reg = [('buildingCnt', u'(\d+)栋', infoText, 0, ''),
 		   ('houseCnt', u'(\d+)户', infoText, 0, ''),
-		   ('age', u'(\d+)年', infoText, 0, ''),
+		   ('age', u'(\d+)年|\d+-\d+', infoText, 0, ''),
 		   ('district', u'位置及周边：\[(.*?)\]', bankuaiText, 0, ''),
 		   ('region', u'位置及周边：\[.*?\](\S+)', bankuaiText, 0, '')
 		   ]
@@ -64,6 +107,52 @@ def get_village_detail(dataId=u'5011000018313'):
 			details[key] = default
 	return details
 
+def get_village_detail2(dataId=u'5011000018313'):
+	url = urlDict['village_detail'].format(dataId=dataId)
+	html = requests.get(url).content
+	sp = bs(html, 'html.parser')
+	infoText = sp.find('div', attrs={'class': 'summary'}).text
+	address = sp.find('p', attrs={'class': 'address'}).text
+
+	details = dict()
+	reg = [('buildingCnt', u'(\d+)栋', infoText, 0, ''),
+		   ('houseCnt', u'(\d+)户', infoText, 0, ''),
+		   ('age', u'\d+-\d+|\d+', infoText, 0, ''),
+		   ('district', u'([^－\s]+)－([^－\s]+)', address, 0, ''),
+		   ('region', u'([^－\s]+)－([^－\s]+)', address, 1, '')
+		   ]
+
+	for key, pattern, string, idx, default in reg:
+		try:
+			m = re.findall(pattern, string)
+			if isinstance(m[0], tuple):
+				m = m[0]
+			details[key] = m[idx]
+		except:
+			details[key] = default
+	return details
+
+
+def updateVillageInfo(villages, lat=None, long=None):
+	totalCnt = len(villages)
+	# 更新小区详情，距离
+	for idx, village in enumerate(villages):
+		if village.get('distance'):
+			continue
+		time.sleep(0.2)
+		dataId = village.get('dataId')
+		villageLat = village.get('latitude')
+		villageLong = village.get('longitude')
+		villageDetails = get_village_detail2(dataId)
+		if lat is not None:
+			villageDetails['distance'] = distance.calc_distance(lat, long, villageLat, villageLong)
+		villageDetails['detailUrl'] = urlDict['village_detail'].format(dataId=dataId)
+		villageDetails['gotoMap'] = urlDict['gotoMap'].format(long=villageLong, lat=villageLat)
+		village.update(villageDetails)
+		print(u'当前进度{idx}/{totalCnt}'.format(idx=idx + 1, totalCnt=totalCnt))
+	return villages
+
+
 # 爬取
 def crawl(lat, long, radius):
 	bounds = distance.calc_bounds(lat, long, radius)
@@ -74,23 +163,14 @@ def crawl(lat, long, radius):
 				  minLong=bounds[2],
 				  maxLong=bounds[3])
 	mapCenterUrl = gen_url(**kwargs)
-	# 所有小区
-	villages = get_villages(mapCenterUrl)
-	totalCnt = len(villages)
-	# 更新小区详情，距离
-	for idx, village in enumerate(villages):
-		if village.get('distance'):
-			continue
-		time.sleep(0.2)
-		dataId = village.get('dataId')
-		villageLat = village.get('latitude')
-		villageLong = village.get('longitude')
-		villageDetails = get_village_detail(dataId)
-		villageDetails['distance'] = distance.calc_distance(lat, long, villageLat, villageLong)
-		villageDetails['detailUrl'] = urlDict['village_detail'].format(dataId=dataId)
-		villageDetails['gotoMap'] = urlDict['gotoMap'].format(long=villageLong, lat=villageLat)
-		village.update(villageDetails)
-		print(u'当前进度{idx}/{totalCnt}'.format(idx=idx + 1, totalCnt=totalCnt))
+	villages = getVillagesByCenterPoint(mapCenterUrl)  # 所有小区
+	villages = updateVillageInfo(villages, lat=lat, long=long)
+	return villages
+
+
+def crawlByDistrict(districtName):
+	villages = getVillagesByDistrict(districtName)
+	villages = updateVillageInfo(villages)
 	return villages
 
 

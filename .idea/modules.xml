@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BaiduSpider/.idea/BaiduSpider.iml" filepath="$PROJECT_DIR$/../BaiduSpider/.idea/BaiduSpider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bi/.idea/bi.iml" filepath="$PROJECT_DIR$/../bi/.idea/bi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../exportData/.idea/exportData.iml" filepath="$PROJECT_DIR$/../exportData/.idea/exportData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../memopy/.idea/memopy.iml" filepath="$PROJECT_DIR$/../memopy/.idea/memopy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bi/.idea/public_script.iml" filepath="$PROJECT_DIR$/../bi/.idea/public_script.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bi/jiangb/restAPI/.idea/restAPI.iml" filepath="$PROJECT_DIR$/../bi/jiangb/restAPI/.idea/restAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spiders/.idea/spiders.iml" filepath="$PROJECT_DIR$/../spiders/.idea/spiders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../uPhone/.idea/uPhone.iml" filepath="$PROJECT_DIR$/../uPhone/.idea/uPhone.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/web_crawler.iml" filepath="$PROJECT_DIR$/.idea/web_crawler.iml" />
     </modules>
   </component>

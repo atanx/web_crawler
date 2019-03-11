@@ -102,7 +102,7 @@ def help():
 @main.route('/get_result', methods=['GET'])
 def get_result():
 	STATIC_DATA_PATH = 'static/data/'
-	FILE_PATH        = './CrawlWeb/static/data/'
+	FILE_PATH        = './uPhone/static/data/'
 	if OS_TYPE == 'Windows':
 		all_files = [i.decode('gbk') for i in os.listdir(FILE_PATH)]
 		all_csv_files = [i.decode('gbk') for i in os.listdir(FILE_PATH) if i.endswith('.csv') or i.endswith('.txt')]

@@ -152,7 +152,7 @@ class Qichacha(object):
 		max_pages -= 1
 		b = self.browser
 		trs = b.find_by_xpath('//table[@class="m_srchList"]/tbody//tr')
-		# response = Selector(text=b.html)
+		# response = Selector(text=browser.html)
 		# trs = response.xpath('//table[@class="m_srchList"]/tbody//tr')
 		for tr in trs:
 			html = tr.outer_html

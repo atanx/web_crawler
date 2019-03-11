@@ -88,7 +88,7 @@ def crawl(file_list):
 
 if __name__ == "__main__":
 	cwd = os.path.abspath(os.path.dirname(__file__))
-	RAW_FILE_PATH = os.path.join(cwd, 'CrawlWeb', 'static', 'data')
+	RAW_FILE_PATH = os.path.join(cwd, 'uPhone', 'static', 'data')
 	RAW_FILE_PATH = os.path.abspath(RAW_FILE_PATH)
 	SPIDER_URI = cwd + '/baidu'
 	os.chdir(SPIDER_URI)
